@@ -4,13 +4,15 @@
 
 num_of_days = int(input("How many day's temperature? "))
 temps = []
+total_temp = 0
 for i in range(num_of_days):
-    x = input(f"Day {i}'s high temp: ")
-    temps.append(int(x))
+    x = int(input(f"Day {i}'s high temp: "))
+    temps.append(x)
+    total_temp += x
 
 # step2: calculate the avg temperature and print the number of days above avg.
 
-avg_temp = sum(temps) / len(temps)
+avg_temp = total_temp / len(temps)
 print("Output:")
 print(f"Average = {round(avg_temp, 2)}")
 days_above_avg = 0
